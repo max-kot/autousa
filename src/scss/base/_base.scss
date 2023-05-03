@@ -1,0 +1,114 @@
+html,
+body {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--main-font);
+	font-weight: 300;
+	font-style: normal;
+	font-size: rem(18);
+	line-height: lh(27, 18);
+	color: var(--black-color);
+	background: var(--light-color);
+
+}
+
+/*--- Utility ---*/
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	// делает элемент скрытым, но он по-прежнему на странице
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	display: block;
+	margin-left: -10000px;
+	background: transparent;
+	font-size: 0;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+/*--- Grid ---*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative; //! чтобы absolute у дочерних элементов не создавал скролл
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+	padding: 0 var(--container-padding);
+	margin: 0 auto;
+}
+
+/*--- Elements ---*/
+.button {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	text-transform: uppercase;
+	font-size: rem(14);
+	line-height: lh(21, 14);
+	padding: 14px 54px;
+	background-color: var(--accent-color);
+	transition: all 0.5s;
+	max-width: 350px;
+	&:hover {
+		color: var(--accent-color);
+		background-color: var(--light-color);
+	}
+	
+}
+
+.social {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25px;
+		height: 25px;
+		color: var(--light-color);
+		transition: all 0.5s;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+		}
+
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}

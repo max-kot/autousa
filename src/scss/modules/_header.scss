@@ -1,0 +1,53 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 47px;
+
+	@media (max-width: 1024px) {
+		padding-top: 15px;
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin: -2px -15px;
+
+		& > * {
+			margin: 2px 15px;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__phone-link {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: rem(36);
+		line-height: lh(53, 36);
+		color: var(--light-color);
+		transition: all 0.5s;
+		
+		@media (max-width: 550px) {
+			font-size: rem(22);	
+		}
+
+		&:hover {
+			color: var(--accent-color);
+		}
+
+		
+	}
+}
+.logo {
+	transition: all 0.5s;
+	
+	&:hover {
+		opacity: 0.7;
+	}
+}

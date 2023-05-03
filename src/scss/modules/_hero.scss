@@ -1,0 +1,125 @@
+.hero {
+	padding: calc(var(--header-height) + 105px) 0 120px;
+	background-image: url("../img/hero/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	min-height: 700px;
+	color: var(--light-color);
+	margin-bottom: 200px;
+
+	@media (max-width: 1024px) {
+		padding: calc(var(--header-height) + 35px) 0 60px;
+		min-height: 100%;
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		max-width: 768px;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+		font-size: rem(72);
+		line-height: lh(107, 72);
+		text-transform: uppercase;
+
+		@media (max-width: 1024px) {
+			font-size: rem(52);
+		}
+
+		@media (max-width: 550px) {
+			font-size: rem(36);
+		}
+	}
+
+	&__subtitle {
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: rem(36);
+		line-height: lh(53, 36);
+
+		@media (max-width: 1024px) {
+			font-size: rem(26);
+		}
+
+		@media (max-width: 550px) {
+			font-size: rem(20);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+			@media (max-width: 550px) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__text {
+		margin: 0;
+		padding: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+			@media (max-width: 550px) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__button {
+		align-self: flex-start;
+
+		@media (max-width: 550px) {
+			min-width: 100%;
+			text-align: center;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 70px;
+			@media (max-width: 550px) {
+				margin-bottom: 30px;
+			}
+		}
+
+	}
+
+	&__social {
+		margin-left: 55px;
+
+		@media (max-width: 1024px) {
+			margin-left: 25px;			
+		}
+
+		@media (max-width: 550px) {
+			margin-left: unset;
+			justify-content: center;
+		}
+	}
+	
+	&__image {
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		bottom: -330px;
+
+		@media (max-width:768px) {
+			opacity: 0.4;
+			right: -350px;
+			bottom: -68px;
+		}
+	}
+}
