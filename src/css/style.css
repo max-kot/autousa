@@ -1,10 +1,5 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/slick-carousel/slick/slick.css";
-@import "../../node_modules/@fancyapps/ui/dist/fancybox.css";
-@import "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
-@import "../../node_modules/rateyo/src/jquery.rateyo.css";
-@import "../../node_modules/jquery.formstyler-modern/jquery.formStylerModern.css";
-@import "../../node_modules/jquery.formstyler-modern/style/jquery.formStylerModern.default.css";
 :root {
   --light-color: #fff;
   --brand-color: #21062a;
@@ -621,4 +616,209 @@ body {
 .services-list__text {
   margin: 0;
   padding: 0;
+}
+
+.benefits {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .benefits {
+    padding-bottom: 50px;
+  }
+}
+.benefits__body {
+  margin: -15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.benefits__body > * {
+  margin: 15px;
+}
+.benefits__image {
+  flex: 0 0 320px;
+}
+@media (max-width: 768px) {
+  .benefits__image {
+    display: none;
+  }
+}
+.benefits__content {
+  flex: 0 1 785px;
+}
+.benefits__title {
+  margin-left: 184px;
+}
+@media (max-width: 1024px) {
+  .benefits__title {
+    margin-left: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .benefits__title {
+    margin-left: unset;
+  }
+}
+.benefits__title:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .benefits__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.benefits__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: var(--brand-color);
+  padding: 23px 10px 45px 184px;
+  color: var(--light-color);
+}
+@media (max-width: 1024px) {
+  .benefits__list {
+    padding-left: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .benefits__list {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 550px) {
+  .benefits__list {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+.benefits__item {
+  max-width: 320px;
+}
+.benefits__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .benefits__item {
+    max-width: 100%;
+  }
+}
+.benefits__subtitle {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.benefits__subtitle:not(:last-child) {
+  margin-bottom: 5px;
+}
+.benefits__num {
+  display: block;
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+.benefits__text {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  padding-bottom: 100px;
+  background-color: var(--light-color);
+}
+@media (max-width: 768px) {
+  .gallery {
+    padding-bottom: 50px;
+  }
+}
+.gallery__title:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .gallery__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.gallery__slider {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin: 0 -7px;
+}
+.gallery__slider .slick-dots {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -10px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .gallery__slider .slick-dots {
+    margin-top: 20px;
+  }
+}
+.gallery__slider .slick-dots li {
+  margin: 10px;
+  font-size: 0;
+  line-height: 0;
+  display: inline-flex;
+}
+.gallery__slider .slick-dots li.slick-active button {
+  background-color: var(--accent-color);
+}
+.gallery__slider .slick-dots button {
+  border: none;
+  width: 50px;
+  height: 3px;
+  background-color: var(--gray-color);
+  transition: all 0.5s;
+}
+.slide__wrapper {
+  margin: 0 7px;
+  padding: 10px;
+  background-color: var(--light-color);
+  border: 2px solid var(--gray-color);
+  text-align: center;
+}
+.slide__wrapper:hover {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  color: var(--light-color);
+}
+.slide__image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .slide__image {
+    height: 170px;
+  }
+}
+.slide__image:not(:last-child) {
+  margin-bottom: 23px;
+}
+.slide__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.slide__title:not(:last-child) {
+  margin-bottom: 5px;
+}
+.slide__text {
+  padding: 0;
+  margin: 0;
 }
