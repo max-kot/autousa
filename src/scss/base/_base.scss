@@ -65,14 +65,24 @@ body {
 .button {
 	display: inline-block;
 	text-decoration: none;
-	color: inherit;
+	color: var(--light-color);
 	text-transform: uppercase;
 	font-size: rem(14);
 	line-height: lh(21, 14);
 	padding: 14px 54px;
+	font-weight: 400;
 	background-color: var(--accent-color);
 	transition: all 0.5s;
 	max-width: 350px;
+
+	&--border{
+		border: 2px solid transparent;
+
+		&:hover {
+			border-color: var(--accent-color);
+		}
+	}
+
 	&:hover {
 		color: var(--accent-color);
 		background-color: var(--light-color);
@@ -109,6 +119,35 @@ body {
 
 		&:hover {
 			color: var(--accent-color);
+		}
+	}
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: rem(36);
+	line-height: lh(53, 36);
+	text-transform: uppercase;
+	color: var(--brand-color);
+
+	@media (max-width: 550px) {
+		font-size: rem(26);
+	}
+
+	&::after {
+		content: '';
+		position: relative;
+		display: inline-block;
+		top: -17px;
+		height: 3px;
+		width: 80px;
+		margin-left: 9px;
+		background-color: var(--brand-color);
+
+		@media (max-width: 550px) {
+			top: -10px;
 		}
 	}
 }
