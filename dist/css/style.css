@@ -295,6 +295,7 @@ body {
 }
 
 .logo {
+  flex-shrink: 0;
   transition: all 0.5s;
 }
 .logo:hover {
@@ -939,6 +940,30 @@ body {
   .contacts-form__button {
     margin-top: 30px;
   }
+}
+
+.footer {
+  background-color: var(--brand-color);
+  color: var(--light-color);
+  padding: 24px 0;
+}
+.footer__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+.footer__body > * {
+  margin: 5px;
+}
+.footer__policy-link {
+  color: var(--light-color);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.footer__policy-link:hover {
+  color: var(--accent-color);
 }
 @supports (-webkit-appearance:none){
 .hero{background-image:url("../img/hero/bg.webp")}
