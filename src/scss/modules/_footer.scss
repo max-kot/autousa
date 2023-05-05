@@ -1,0 +1,33 @@
+.footer {
+	background-color: var(--brand-color);
+	color: var(--light-color);
+	padding: 24px 0;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: -5px;
+
+		& > * {
+			margin: 5px;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__social {
+	}
+
+	&__policy-link {
+		color: var(--light-color);
+		text-decoration: none;
+		transition: all 0.5s;
+
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}

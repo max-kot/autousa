@@ -14,7 +14,6 @@ body {
 	line-height: lh(27, 18);
 	color: var(--black-color);
 	background: var(--light-color);
-
 }
 
 /*--- Utility ---*/
@@ -74,8 +73,9 @@ body {
 	background-color: var(--accent-color);
 	transition: all 0.5s;
 	max-width: 350px;
+	border: none;
 
-	&--border{
+	&--border {
 		border: 2px solid transparent;
 
 		&:hover {
@@ -87,7 +87,6 @@ body {
 		color: var(--accent-color);
 		background-color: var(--light-color);
 	}
-	
 }
 
 .social {
@@ -137,7 +136,7 @@ body {
 	}
 
 	&::after {
-		content: '';
+		content: "";
 		position: relative;
 		display: inline-block;
 		top: -17px;
@@ -148,6 +147,14 @@ body {
 
 		@media (max-width: 550px) {
 			top: -10px;
+		}
+	}
+
+	&--white {
+		color: var(--light-color);
+
+		&::after {
+			background-color: var(--light-color);
 		}
 	}
 }
